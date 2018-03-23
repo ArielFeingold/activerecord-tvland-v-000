@@ -24,6 +24,10 @@ ActiveRecord::Schema.define(version: 9) do
     t.string "catchphrase"
   end
 
+  create_table "genres", force: :cascade do |t|
+    t.string "name"
+  end
+
   create_table "networks", force: :cascade do |t|
     t.string "call_letters"
     t.integer "channel"
@@ -33,7 +37,6 @@ ActiveRecord::Schema.define(version: 9) do
     t.string "name"
     t.integer "network_id"
     t.string "day"
-    t.string "season"
   end
 
 end
